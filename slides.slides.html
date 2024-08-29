@@ -7440,7 +7440,7 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="OpenML-%E2%9D%A4%EF%B8%8F-Data-Driven-Materials-Discovery">OpenML ❤️ Data-Driven Materials Discovery<a class="anchor-link" href="#OpenML-%E2%9D%A4%EF%B8%8F-Data-Driven-Materials-Discovery">¶</a></h1><p><img alt="alt text" src="images/qr.png"/></p>
+<h1 id="OpenML-%E2%9D%A4%EF%B8%8F-Material-Science">OpenML ❤️ Material Science<a class="anchor-link" href="#OpenML-%E2%9D%A4%EF%B8%8F-Material-Science">¶</a></h1><p><img alt="alt text" src="images/qr.png"/></p>
 <ul>
 <li>Presented by : Subhaditya Mukherjee , Research Engineer at OpenML</li>
 <li>All the links and information here : <a href="https://t.ly/u7k_b">https://t.ly/u7k_b</a></li>
@@ -7508,9 +7508,10 @@ main {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="You-and-your-research-(?)">You and your research (?)<a class="anchor-link" href="#You-and-your-research-(?)">¶</a></h2><ul>
-<li>Hard to use AI</li>
+<li>Hard to use AI for the broader community</li>
 <li>Share implementations, datasets, and experiments</li>
-<li>Metadata</li>
+<li>Metadata and maintainability</li>
+<li>Educational resources</li>
 </ul>
 </div>
 </div>
@@ -7689,6 +7690,7 @@ main {
 <span class="n">clf</span> <span class="o">=</span> <span class="n">ensemble</span><span class="o">.</span><span class="n">RandomForestClassifier</span><span class="p">()</span>
 <span class="c1"># Download any OpenML task</span>
 <span class="n">task</span> <span class="o">=</span> <span class="n">tasks</span><span class="o">.</span><span class="n">get_task</span><span class="p">(</span><span class="mi">3954</span><span class="p">)</span>
+<span class="n">run</span> <span class="o">=</span> <span class="n">runs</span><span class="o">.</span><span class="n">run_model_on_task</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">task</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -7702,10 +7704,9 @@ main {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">run</span> <span class="o">=</span> <span class="n">runs</span><span class="o">.</span><span class="n">run_model_on_task</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">task</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">run</span><span class="p">)</span>
-<span class="c1"># openml.config.apikey = 'YOUR_KEY'</span>
-<span class="c1"># run.publish()</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">run</span><span class="p">)</span>
+<span class="n">openml</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">apikey</span> <span class="o">=</span> <span class="s1">'YOUR_KEY'</span>
+<span class="n">run</span><span class="o">.</span><span class="n">publish</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
